@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const productschema = new Schema({
-    productName:{
+    name:{
         type:String,
         minLength:5,
         maxLength:25,
@@ -22,13 +22,31 @@ const productschema = new Schema({
         maxLength:25,
         required:true,
     },
-    userQuantity:{
-        type:Number,
-        minLength:5,
-        maxLength:25,
+    brands:{
+        type:String,
         required:true,
     },
-    
+    size:{
+        type:String,
+        required:true,
+    },
+    colors:{
+        type:String,
+        required:true,
+    },
+    category:{
+        type:String,
+        required:true,
+    },
+    store:{
+        type:String,
+        required:true,
+    },
+    status:{
+        type:String,
+        reuqired:true,
+    },
+
 })
 
 const Product = mongoose.model("product",productschema,"product");
