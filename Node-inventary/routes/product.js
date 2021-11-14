@@ -2,12 +2,12 @@ var express = require("express");
 
 var router = express.Router();
 
-const {postProduct,getProduct,updateProduct,deleteProduct} = require("../module/productModule");
+const {postproduct,getproduct,updateproduct,deleteproduct} = require("../module/productModule");
 
-router.post("/postproduct",postProduct);
-router.get("/getProduct",getProduct);
-router.patch("/updateproduct/:id", updateProduct)
-router.delete("/deleteProduct/:id", deleteProduct)
+router.post("/postproduct",postproduct);
+router.get("/getproduct",getproduct);
+router.patch("/updateproduct/:id", updateproduct)
+router.delete("/deleteproduct/:id", deleteproduct)
 
 
 module.exports= router;
